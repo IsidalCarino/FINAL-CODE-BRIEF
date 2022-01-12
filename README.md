@@ -70,15 +70,19 @@ int main()
         }
         default:
         {
-            cout << "Input is not recognized. We will be providing a sachet of sugar for you instead; just incase you need it." << endl;
+            cout << "Input is not recognized. But we will be providing sachet of sugar for you; just incase you need it." << endl;
             break;
         }
         }
     }
     {
-        double money;
+        double a = 1, b = 2, c = 3;
+        double money;   
         cout << "\nPlease enter your money(AED):";
         cin >> money;
+        double z = money - a;
+        double x = money - b;
+        double y = money - c;
         while (cin.fail())
         {
             cin.clear();
@@ -86,26 +90,56 @@ int main()
             cout << "\nInvalid Input. Please input your amount of money: ";
             cin >> money;
         }
-        if (money <= 3) {
-            cout << "Sorry. you do not have enough money to buy this drink. Thank you! Please come again next time." << endl;
+        if (z < 0 && x < 0 && y < 0) {
+            cout << "\nSorry. you do not have enough money to buy this drink." << endl;
         }
-        else if (order == 1) {
-            cout << "Ice Coffee costs 3 AED." << endl << "You paid: " << money << endl << "Your change is: " << money - 3 << endl;
+        if (order == 1) 
+        {
+            cout << "Ice Coffee costs 3 AED." << endl << "You paid: " << money << endl << "Your change is: " << y << endl;
+            if (y >= 0)
+                cout << "Thanks you come again.\nEnjoy your Ice Coffee!" << endl;
+            if (y < 0)
+                cout << "Your money is not enough. Please take your money back and come again next time." << endl << "Returning: " << money;
         }
-        else if (order == 2) {
-            cout << "Milk Coffee costs 2 AED." << endl << "You paid: " << money << endl << "Your change is : " << money - 2 << endl;
+        if (order == 2)
+        {
+            cout << "Milk Coffee costs 2 AED." << endl << "You paid: " << money << endl << "Your change is : " << x << endl;
+            if (x >= 0)
+                cout << "Thanks you come again.\nEnjoy your Milk Coffee!" << endl;
+            if (x < 0)
+                cout << "Your money is not enough. Please take your money back and come again next time." << endl << "Returning: " << money;
         }
-        else if (order == 3) {
-            cout << "Black Coffee costs 1 AED." << endl << "You paid: " << money << endl << "Your change is: " << money - 1 << endl;
+        if (order == 3) 
+        {
+            cout << "Black Coffee costs 1 AED." << endl << "You paid: " << money << endl << "Your change is: " << z << endl;
+            if (z >= 0)
+                cout << "Thank you come again.\nEnjoy your Black Coffee!" << endl;
+            if (z < 0)
+                cout << "Your money is not enough. Please take your money back and come again next time." << endl << "Returning: " << money;
         }
-        else if (order == 4) {
-            cout << "Ice Tea costs 3 AED." << endl << "You paid: " << money << endl << "Your change is: " << money - 3 << endl;
+        if (order == 4) 
+        {
+            cout << "Ice Tea costs 3 AED." << endl << "You paid: " << money << endl << "Your change is: " << y << endl;
+            if (y >= 0)
+                cout << "Thank you come again.\nEnjoy your Ice Tea!" << endl;
+            if (y < 0)
+                cout << "Your money is not enough. Please take your money back and come again next time." << endl << "Returning: " << money;
         }
-        else if (order == 5) {
-            cout << "Milk Tea costs 2 AED." << endl << "You paid: " << money << endl << "Your change is: " << money - 2 << endl;
+        if (order == 5) 
+        {
+            cout << "Milk Tea costs 2 AED." << endl << "You paid: " << money << endl << "Your change is: " << x << endl;
+            if (x >= 0)
+                cout << "Thank you come again.\nEnjoy your Milk Tea!" << endl;
+            if (x < 0)
+                cout << "Your money is not enough. Please take your money back and come again next time." << endl << "Returning: " << money;
         }
-        else if (order == 6) {
-            cout << "Black Tea costs 1 AED." << endl << "You paid: " << money << endl << "Your change is: " << money - 1 << endl;
+        if (order == 6) 
+        {
+            cout << "Black Tea costs 1 AED." << endl << "You paid: " << money << endl << "Your change is: " << z << endl;
+            if (z >= 0)
+                cout << "Thank you come again.\nEnjoy your Black Tea!" << endl;
+            if (z < 0)
+                cout << "Your money is not enough. Please take your money back and come again next time." << endl << "Returning: " << money;
         }
     }
 } 
